@@ -12,8 +12,6 @@ def num_of_chars(words):
     new_char_count = {}
     arr = []
 
-    letters = "abcdefghijklmnopqrstuvwxyzæâêëô"
-
 
     for word in words:
         word = word.lower()
@@ -25,7 +23,7 @@ def num_of_chars(words):
 
 
     for letter in char_count:
-        if letter in letters:
+        if letter.isalpha():
             arr.append(char_count[letter])
             new_char_count[letter] = char_count[letter]
 
